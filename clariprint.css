@@ -1,0 +1,155 @@
+
+
+div.clariprint_product {
+	
+}
+
+div.clariprint_product h4 {
+	color: #2B6FB6;
+}
+
+div.clariprint_product div.title {
+	width: 100%;
+	color: #2B6FB6;
+	border-bottom: 1px solid #999;
+}
+
+div.clariprint_product div.colors  {
+	float: left;
+}
+
+div.clariprint_product div.colors label {
+	float: none;
+}
+
+div.colors {
+	background-color: transparent;
+}	
+
+div.clariprint_product hr {
+	border-top: 1px solid white;
+}
+
+
+.clariprint_product .number,
+.clariprint_product input.CLInt,
+.clariprint_product input.CLFloat
+ {
+	 text-align: right;
+}
+
+.clariprint_product input.CLWarning
+{
+	background-color: #DD8271 ;
+}
+
+.clariprint_product .binding table td {
+	vertical-align: middle;
+	border-bottom: 1px solid #999;
+	padding-left: 3px;
+}
+
+
+
+
+form.ClariprintFront div.clariprint_product
+{
+	width: 100%;
+	background-color: white;
+}
+
+form.ClariprintFront table {
+	width: 100%;
+}
+
+form.ClariprintFront fieldset.colors table td,
+form.ClariprintFront fieldset.coverdie table td {
+	text-align: center;
+}
+
+form.ClariprintFront fieldset.colors table th,
+form.ClariprintFront fieldset.coverdie table th {
+	vertical-align: middle;
+	font-weight: bold;
+}
+
+form.ClariprintFront fieldset.sizes table tbody th,
+form.ClariprintFront fieldset.colors table tbody th,
+form.ClariprintFront fieldset.coverdie table tbody th {
+	vertical-align: middle;
+	text-align: right;
+	font-weight: bold;
+}
+form.ClariprintFront fieldset.sizes  input[type=text] {
+	width: 60px;
+	padding: 1px;
+	margin: 0px;
+}
+
+.clariprint_product div.folding_tabs  li.fold {
+	border: 1px solid #999;
+	text-align: center;
+	vertical-align: middle;
+	padding: 4px;
+	height: 130px; 
+/*	padding-top: 50px;*/
+	display: block;
+	position: relative;
+	width: 200px;
+	margin: 2px;
+	float: left;
+}
+
+.clariprint_product div.folding_tabs  ul.pages {
+	list-style-type: none;
+	overflow: auto;
+}
+.clariprint_product div.wrapping  select {
+	margin: 0px;
+}
+.clariprint_product div.wrapping td {
+vertical-align : top;
+}
+
+
+.content_prices fieldset.clariprint {
+	text-align: left;
+}
+
+.clariprint_radio label {
+	display: inline-block;
+	
+}
+
+.clariprint_product .inks table tbody td {
+	text-align: center;
+}
+
+.PaperWidget li.btn 
+{
+	display: block;
+}
+
+.ClariprintSolverWidget .results .cost {
+	text-align: right;
+	font-color: blue;
+}
+.ClariprintSolverWidget .results .thousandmore {
+	text-align: right;
+	font-style: italic;
+}
+
+
+clariprint_product .input-append input,
+clariprint_product .input-prepend input
+{
+	 font-size: 14px;
+
+}
+
+
+.text-right {
+	text-align: right;
+	color: red;
+}
+

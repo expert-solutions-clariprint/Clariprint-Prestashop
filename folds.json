@@ -1,0 +1,43 @@
+{
+	"4" : [{ "index": 1, "title" : "simple fold"}],
+	"6" : [	
+			{"index":2, "title": "2 fan folds"},
+			{"index":3, "title": "2 rolled folds"},
+			{"index":39, "title": "window folds"}],
+	"8" : [ {"index":4, "title":"2 parallel folds"}
+			{"index":5, "title" : "3 rolled folds"},
+			{"index":6, "title":"3 fan folds (6)"},
+			{"index":10,  "title":"2 crossed folds (10)"},
+			{"index":40,  "title":"3 gate folds (40)"}],
+	"10": [
+			{"index":7, "title":"4 fan folds (7)"}],
+	"12": [
+			{"index":8,  "title":"1 fold + 2 fan folds (8)"},
+			{"index":11,  "title":"5 fan folds (11)"},
+			{"index":12, "title":"2 rolled folds + 1 crossed fold (12)"},
+			{"index":13,  "title":"2 fan folds + 1 cross fold (13)"},
+			{"index":14, "title":"1 fold + roll folds (14)"},
+			{"index":15,  "title":"1 fold + 2 fan folds (15)"},
+			{"index":16,  "title":"2 rolled folds + 1 crossed fold (16)"}],
+"14": [
+			{"index":17, "title":"6 fan folds (17)"}],
+"16": [
+			{"index":9, "title":"1 fold + 2 parallel folds (9)"},
+			{"index":18,  "title":"7 fan folds (18)"},
+			{"index":19, "title":"2 parallel folds + 1 crossed fold (19)"},
+			{"index":32, "title":"3 crossed folds (32)"},
+			{"index":33,  "title":"2 parallel folds + 1 crossed fold (33)"},
+			{"index":100, "title":"3 plis accordéon©on + 1 pli croisé", "jdf" : "F16-11"}],
+"20": [
+	 		{"index":100, "title":"4 plis accordéon©on + 1 pli croisé", "jdf" : "F20-2"}],
+"24": [
+			{"index":26,  "title":"2 parallel folds + 2 rolled folds (26)"},
+			{"index":27,  "title":"2 parallel folds + 2 fan folds (27)"},
+			{"index":28, "title":"2 fan folds + 2 parallel folds (28)"},
+			{"index":29, "title":"2 rolled folds + 2 parallel folds (29)"},
+			{"index":100, "title":"5 plis accordéon + 1 pli croisé", "jdf" : "F24-6"}],
+"32": [
+			{"index":30, "title":"2 parallel folds + 2 parallel folds (30)"},
+			{"index":35,  "title":"1 fold + 2 parallel folds + 1 cross fold ()"}]
+}
+
