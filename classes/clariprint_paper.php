@@ -62,6 +62,9 @@ class ClariprintPaper extends ObjectModel
 	public $weight;
 
 	/** @var string */
+	public $thickness;
+
+	/** @var string */
 	public $recycled;
 
 	/** @var string */
@@ -111,6 +114,7 @@ class ClariprintPaper extends ObjectModel
 		brand varchar(100) default \'\',
 		color varchar(100) default \'\',
 		weight float default 0.0,
+		thickness float default 0.0,
 		recycled bool default 0,
 		fsc bool default 0,
 		fsc_mixed bool default 0,
@@ -163,6 +167,9 @@ class ClariprintPaper extends ObjectModel
 
 			/** @var string */
 			'weight' => array('type' => self::TYPE_FLOAT),
+			
+			/** @var string */
+			'thickness' => array('type' => self::TYPE_FLOAT),
 
 			/** @var string */
 			'recycled' => array('type' => self::TYPE_BOOL, 'validate' => 'isBool'),

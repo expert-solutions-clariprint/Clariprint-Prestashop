@@ -49,6 +49,11 @@ class AdminClariprintPapersController extends ModuleAdminController
 				'align' => 'right',
 				'width' => 65
 			),
+			'thickness' => array(
+				'title' => $this->l('Thickness'),
+				'align' => 'right',
+				'width' => 65
+			),
 			'pefc' => array(
 				'type' => 'bool',
 				'title' => $this->l('PEFC'),
@@ -304,6 +309,11 @@ class AdminClariprintPapersController extends ModuleAdminController
 							$x->brand = (string)$this->ensureUtf8(array_shift($line));
 							$x->color = (string)$this->ensureUtf8(array_shift($line));
 							$x->weight = (float)array_shift($line);
+							if (count($line) > 28)
+								$x->thickness = (float)array_shift($line);
+							else 
+								$x->thickness = $x->weight / 1000;
+
 							$x->recycled = (bool)array_shift($line);
 							$x->fsc = (bool)array_shift($line);
 							$x->fsc_mixed = (bool)array_shift($line);
