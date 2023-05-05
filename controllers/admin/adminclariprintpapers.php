@@ -314,7 +314,9 @@ class AdminClariprintPapersController extends ModuleAdminController
 							$x->brand = (string)$this->ensureUtf8(array_shift($line));
 							$x->color = (string)$this->ensureUtf8(array_shift($line));
 							$x->weight = (float)array_shift($line);
-							if (count($line) > 28)
+							if ($nelem > 28)
+							{
+								$this->module->log('use thickness');
 								$x->thickness = (float)array_shift($line);
 							}
 							else
