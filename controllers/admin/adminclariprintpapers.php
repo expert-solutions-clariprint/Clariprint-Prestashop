@@ -321,6 +321,7 @@ class AdminClariprintPapersController extends ModuleAdminController
 							}
 							else
 							{ 
+								$this->module->log('calculate thickness');
 								$x->thickness = $x->weight;
 							}
 
