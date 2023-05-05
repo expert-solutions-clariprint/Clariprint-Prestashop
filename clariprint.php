@@ -146,7 +146,18 @@ class Clariprint extends Module
 	{
 		if ($this->direct_messaging) printf('<div class="alert alert-danger" role="alert"><i class="material-icons">error_outline</i><p class="alert-text">%s</p></div>',$value);
 		$this->_confirmations[] = array('class'=>'error','txt' => $value);
-	}	
+	}
+	var $error_log = null;
+	public function log($v)
+	{
+		if (!$this->error_log) $this->error_log = fopen(_PS_MODULE_DIR_ ."/clariprint/logs/debug.log",'a');
+		if ($this->error_log)
+		{
+			if (is_array($v)) fwrite($this->error_log, print_r($v,true));
+			else fwrite($this->error_log, $v);
+			fwrite($this->error_log,"\n");
+		}
+	}
 
 	static public function getConfig($product_id) {
 		return (bool)Db::getInstance()->getRow('SELECT * FROM `'._DB_PREFIX_.'clariprint_product` WHERE `id_product` = '.(int)$product_id);

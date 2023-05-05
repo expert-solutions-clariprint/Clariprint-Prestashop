@@ -268,8 +268,11 @@ class AdminClariprintPapersController extends ModuleAdminController
 			$request->setPostFields(array('login' => Configuration::get('CL_SERVER_LOGIN'),'password' => Configuration::get('CL_SERVER_PASSWORD'),'action' => 'PaperCatalog'));
 			$request->send();
 			$resp =	json_decode($request->getResponseBody()); */
+			$this->module->log("Start sync");
+
 			$ch = curl_init();
 			curl_setopt($ch, CURLOPT_URL,Configuration::get('CL_PA_SERVER_URL') . '/optimproject/json.wcl');
+
 
 			curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1);
 			curl_setopt($ch, CURLOPT_TIMEOUT, 2000);
@@ -289,6 +292,7 @@ class AdminClariprintPapersController extends ModuleAdminController
 			//						'action' => 'PaperCatalog'));
 			$res = curl_exec($ch);			
 			$resp = json_decode($res);
+			$this->module->log("process papers response");
 
 			if ($resp)
 			{
@@ -302,6 +306,7 @@ class AdminClariprintPapersController extends ModuleAdminController
 						$res = array();
 						foreach($resp->result as $line)
 						{
+							$nelem = count($line);
 							$x  = new ClariprintPaper();
 							$x->id_shop = $id_shop;
 							/** @var integer */
@@ -311,8 +316,11 @@ class AdminClariprintPapersController extends ModuleAdminController
 							$x->weight = (float)array_shift($line);
 							if (count($line) > 28)
 								$x->thickness = (float)array_shift($line);
-							else 
-								$x->thickness = $x->weight / 1000;
+							}
+							else
+							{ 
+								$x->thickness = $x->weight;
+							}
 
 							$x->recycled = (bool)array_shift($line);
 							$x->fsc = (bool)array_shift($line);
